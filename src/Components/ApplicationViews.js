@@ -2,6 +2,9 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
+import EmployeeList from "./employee/EmployeeList";
+import OwnerList from "./owner/OwnerList";
+import LocationList from "./location/LocationList";
 //only include these once they are built - previous practice exercise
 
 class ApplicationViews extends Component {
@@ -19,6 +22,24 @@ class ApplicationViews extends Component {
           path="/animals"
           render={props => {
             return <AnimalList />;
+          }}
+        />
+        <Route
+          path="/locations"
+          render={props => {
+            return <LocationList />;
+          }}
+        />
+        <Route
+          path="/employees"
+          render={props => {
+            return <EmployeeList />;
+          }}
+        />
+        <Route
+          path="/owners"
+          render={props => {
+            return <OwnerList />;
           }}
         />
       </React.Fragment>

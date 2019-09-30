@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-
-class AnimalCard extends Component {
+class EmployeeCard extends Component {
   render() {
     return (
       <div className="card">
         <div className="card-content">
+          <i class="fad fa-user"></i>
           <h3>
-            Name: <span className="card-employeeName">Mr. Bean</span>
+            Name:{" "}
+            <span className="card-employeeName">
+              {this.props.employee.name}
+            </span>
           </h3>
-          <p>Likes: Poodles</p>
+          <p>Location: {this.props.employee.location}</p>
         </div>
       </div>
     );
