@@ -2,7 +2,9 @@
   "animals": [
     { "id": 1, "name": "Doodles", "breed": "Poodle", "employeeId": 1 },
     { "id": 2, "name": "Decker", "breed": "German Sheperd", "employeeId": 2 },
-    { "id": 3, "name": "Esme", "breed": "Pitbull", "employeeId": 3 }
+    { "id": 3, "name": "Doodles", "breed": "Poodle", "employeeId": 1 },
+    { "id": 4, "name": "Decker", "breed": "German Sheperd", "employeeId": 2 },
+    { "id": 5, "name": "Esme", "breed": "Pitbull", "employeeId": 3 }
   ],
   "employees": [
     { "id": 1, "name": "Sally", "location": "North Nashville" },
@@ -10,15 +12,21 @@
     { "id": 3, "name": "Raphael", "location": "South Nashville" }
   ],
   "locations": [
-    { "id": 1, "name": "North Nashville" },
-    { "id": 2, "name": "East Nashville" },
-    { "id": 3, "name": "South Nashville" },
-    { "id": 4, "name": "West Nashville" }
+    { "id": 1, "name": "North Nashville", "address": "Y'Moms House" },
+    { "id": 2, "name": "East Nashville", "address": "Y'Moms House" },
+    { "id": 3, "name": "South Nashville", "address": "Y'Moms House" },
+    { "id": 4, "name": "North Nashville", "address": "Y'Moms House" },
+    { "id": 5, "name": "East Nashville", "address": "Y'Moms House" },
+    { "id": 6, "name": "South Nashville", "address": "Y'Moms House" },
+    { "id": 7, "name": "West Nashville", "address": "Y'Moms House" }
   ],
   "Owners": [
     { "id": 1, "name": "Dr. Phil" },
     { "id": 2, "name": "Oprah" },
     { "id": 3, "name": "Maury" },
-    { "id": 4, "name": "Jerry Springer" }
+    { "id": 4, "name": "Jake the Snake" },
+    { "id": 5, "name": "The Undertaker" },
+    { "id": 6, "name": "The Ultimate Warrior" },
+    { "id": 7, "name": "Bushwackers" }
   ]
 }

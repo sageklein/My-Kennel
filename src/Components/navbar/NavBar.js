@@ -7,7 +7,7 @@ class NavBar extends Component {
     return (
       <header>
         <h1 className="site-title">
-          Student Kennels
+          Klein Kennels
           <br />
           <small>Loving care when you're not there.</small>
         </h1>
