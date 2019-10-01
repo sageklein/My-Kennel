@@ -4,21 +4,21 @@ class Home extends Component {
   render() {
     return (
       <div id="homeFlex">
-        <div class="homePic">
-          <picture>
-            <img src="../../../public/dogroom.jpg" alt="Rooms"></img>
-          </picture>
-        </div>
+        <picture>
+          <img src="dogroom.jpg" alt="Rooms"></img>
+        </picture>
         <address class="address">
-          Visit Us at the Nashville North Location
+          <h6>Visit Us at the Nashville North Location</h6>
           <br />
-          500 Puppy Way
+          <h6>500 Puppy Way</h6>
+          <p />
+          <h6>Nashville TN, 37209</h6>
+          <p />
+          <br></br>
         </address>
-        <div class="homePic">
-          <picture>
-            <img src="../../../public/boarding.jpg" alt="Kennel"></img>
-          </picture>
-        </div>
+        <picture>
+          <img src="boarding.jpg" alt="Kennel"></img>
+        </picture>
       </div>
     );
   }

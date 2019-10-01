@@ -2,7 +2,6 @@ import React, { Component } from "react";
 //import the components we will need
 import OwnerCard from "./OwnerCard";
 import OwnerManager from "../../modules/OwnerManager";
-import "./Owner.css";
 
 class OwnerList extends Component {
   //define what this component needs to render
