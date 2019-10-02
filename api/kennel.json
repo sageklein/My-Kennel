@@ -1,7 +1,91 @@
 {
   "animals": [
-    { "id": 1, "name": "Doodles", "breed": "Poodle" },
-    { "id": 2, "name": "Decker", "breed": "German Sheperd" },
-    { "id": 3, "name": "Esme", "breed": "Pitbull" }
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "employeeId": 1
+    },
+    {
+      "name": "Tony",
+      "breed": "All the time.",
+      "id": 2
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sally",
+      "location": "North Nashville"
+    },
+    {
+      "id": 2,
+      "name": "Jessie",
+      "location": "North Nashville"
+    },
+    {
+      "id": 1,
+      "name": "Raphael",
+      "location": "North Nashville"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "North Nashville",
+      "address": "Y'Moms House"
+    },
+    {
+      "id": 2,
+      "name": "East Nashville",
+      "address": "Y'Moms House"
+    },
+    {
+      "id": 3,
+      "name": "South Nashville",
+      "address": "Y'Moms House"
+    },
+    {
+      "id": 4,
+      "name": "North Nashville",
+      "address": "Y'Moms House"
+    },
+    {
+      "id": 6,
+      "name": "South Nashville",
+      "address": "Y'Moms House"
+    },
+    {
+      "id": 7,
+      "name": "West Nashville",
+      "address": "Y'Moms House"
+    }
+  ],
+  "Owners": [
+    {
+      "id": 1,
+      "name": "Dr. Phil",
+      "location": "Not a Turnip Truck"
+    },
+    {
+      "id": 2,
+      "name": "Oprah",
+      "location": "YOU GET A CAR!"
+    },
+    {
+      "id": 3,
+      "name": "Maury",
+      "location": "You said I live in New York, THAT was a lie!"
+    },
+    {
+      "id": 4,
+      "name": "Jake the Snake",
+      "location": "Snake Pit"
+    },
+    {
+      "id": 5,
+      "name": "The Undertaker",
+      "location": "The Darkness"
+    }
   ]
 }

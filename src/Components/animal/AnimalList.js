@@ -8,6 +8,15 @@ class AnimalList extends Component {
   state = {
     animals: []
   };
+  deleteAnimal = id => {
+    AnimalManager.delete(id).then(() => {
+      AnimalManager.getAll().then(newAnimals => {
+        this.setState({
+          animals: newAnimals
+        });
+      });
+    });
+  };
 
   componentDidMount() {
     console.log("ANIMAL LIST: ComponentDidMount");
@@ -23,11 +32,29 @@ class AnimalList extends Component {
     console.log("ANIMAL LIST: Render");
 
     return (
-      <div className="container-cards">
-        {this.state.animals.map(animal => (
-          <AnimalCard key={animal.id} animal={animal} />
-        ))}
-      </div>
+      <>
+        <section className="section-content">
+          <button
+            type="button"
+            className="btn"
+            onClick={() => {
+              this.props.history.push("/animals/new");
+            }}
+          >
+            Admit Animal
+          </button>
+        </section>
+
+        <div className="container-cards">
+          {this.state.animals.map(animal => (
+            <AnimalCard
+              key={animal.id}
+              animal={animal}
+              deleteAnimal={this.deleteAnimal}
+            />
+          ))}
+        </div>
+      </>
     );
   }
 }
