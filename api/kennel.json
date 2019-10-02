@@ -17,6 +17,16 @@
       "id": 1,
       "name": "Sally",
       "location": "North Nashville"
+    },
+    {
+      "id": 2,
+      "name": "Jessie",
+      "location": "North Nashville"
+    },
+    {
+      "id": 1,
+      "name": "Raphael",
+      "location": "North Nashville"
     }
   ],
   "locations": [
@@ -70,7 +80,7 @@
     {
       "id": 4,
       "name": "Jake the Snake",
-      "location": ""
+      "location": "Snake Pit"
     },
     {
       "id": 5,

@@ -44,6 +44,7 @@ class AnimalList extends Component {
             Admit Animal
           </button>
         </section>
+
         <div className="container-cards">
           {this.state.animals.map(animal => (
             <AnimalCard
