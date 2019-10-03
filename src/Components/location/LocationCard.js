@@ -22,6 +22,16 @@ class LocationCard extends Component {
           >
             We Closed
           </button>
+          <button
+            type="button"
+            onClick={() => {
+              this.props.history.push(
+                `/locations/${this.props.location.id}/edit`
+              );
+            }}
+          >
+            Edit
+          </button>
         </div>
       </div>
     );

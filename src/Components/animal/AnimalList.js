@@ -18,6 +18,8 @@ class AnimalList extends Component {
     });
   };
 
+  getData = () => AnimalManager.getAll();
+
   componentDidMount() {
     console.log("ANIMAL LIST: ComponentDidMount");
     //getAll from AnimalManager and hang on to that data; put it in state
@@ -51,6 +53,7 @@ class AnimalList extends Component {
               key={animal.id}
               animal={animal}
               deleteAnimal={this.deleteAnimal}
+              {...this.props}
             />
           ))}
         </div>

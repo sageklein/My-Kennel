@@ -4,7 +4,7 @@ import OwnerManager from "../../modules/OwnerManager";
 class OwnerDetail extends Component {
   state = {
     name: "",
-    location: "",
+    owner: "",
     loadingStatus: true
   };
   handleDelete = () => {
@@ -17,6 +17,7 @@ class OwnerDetail extends Component {
 
   componentDidMount() {
     console.log("OwnerDetail: ComponentDidMount");
+    //get(id) from LocationManager and hang on to that data; put it into state
     OwnerManager.get(this.props.ownerId).then(owner => {
       this.setState({
         name: owner.name,
@@ -40,7 +41,7 @@ class OwnerDetail extends Component {
             disabled={this.state.loadingStatus}
             onClick={this.handleDelete}
           >
-            Get Rid Of This Guy!!
+            Fire Him!
           </button>
         </div>
       </div>

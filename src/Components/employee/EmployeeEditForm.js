@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import EmployeeManager from "../../modules/EmployeeManager";
 import "./EmployeeForm.css";
 
-class EmployeeForm extends Component {
+class EmployeeEditForm extends Component {
+  //set the initial state
   state = {
     employeeName: "",
     location: "",
-    loadingStatus: false
+    loadingStatus: true
   };
 
   handleFieldChange = evt => {
@@ -15,26 +16,29 @@ class EmployeeForm extends Component {
     this.setState(stateToChange);
   };
 
-  /*  Local method for validation, set loadingStatus, create employee      
-  object, invoke the EmployeeManager post method, and redirect to the full employee list
-   */
-  constructNewEmployee = evt => {
+  updateExistingEmployee = evt => {
     evt.preventDefault();
-    if (this.state.employeeName === "" || this.state.location === "") {
-      window.alert("Please input an employee name and location");
-    } else {
-      this.setState({ loadingStatus: true });
-      const employee = {
-        name: this.state.employeeName,
-        location: this.state.location
-      };
+    this.setState({ loadingStatus: true });
+    const editedEmployee = {
+      id: this.props.match.params.employeeId,
+      name: this.state.employeeName,
+      location: this.state.location
+    };
 
-      // Create the employee and redirect user to employee list
-      EmployeeManager.post(employee).then(() =>
-        this.props.history.push("/employees")
-      );
-    }
+    EmployeeManager.update(editedEmployee).then(() =>
+      this.props.history.push("/employees")
+    );
   };
+
+  componentDidMount() {
+    EmployeeManager.get(this.props.match.params.employeeId).then(employee => {
+      this.setState({
+        employeeName: employee.name,
+        location: employee.location,
+        loadingStatus: false
+      });
+    });
+  }
 
   render() {
     return (
@@ -45,17 +49,20 @@ class EmployeeForm extends Component {
               <input
                 type="text"
                 required
+                className="form-control"
                 onChange={this.handleFieldChange}
                 id="employeeName"
-                placeholder="Employee name"
+                value={this.state.employeeName}
               />
-              <label htmlFor="employeeName">Name</label>
+              <label htmlFor="employeeName">Employee name</label>
+
               <input
                 type="text"
                 required
+                className="form-control"
                 onChange={this.handleFieldChange}
                 id="location"
-                placeholder="Location"
+                value={this.state.location}
               />
               <label htmlFor="location">Location</label>
             </div>
@@ -63,7 +70,8 @@ class EmployeeForm extends Component {
               <button
                 type="button"
                 disabled={this.state.loadingStatus}
-                onClick={this.constructNewEmployee}
+                onClick={this.updateExistingEmployee}
+                className="btn btn-primary"
               >
                 Submit
               </button>
@@ -75,4 +83,4 @@ class EmployeeForm extends Component {
   }
 }
 
-export default EmployeeForm;
+export default EmployeeEditForm;
