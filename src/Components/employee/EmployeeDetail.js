@@ -39,6 +39,7 @@ class EmployeeDetail extends Component {
             <span style={{ color: "darkslategrey" }}>{this.state.name}</span>
           </h3>
           <p>Location: {this.state.location}</p>
+
           <button
             type="button"
             disabled={this.state.loadingStatus}

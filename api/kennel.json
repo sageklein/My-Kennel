@@ -3,13 +3,35 @@
     {
       "id": 1,
       "name": "Doodles",
-      "breed": "Poodle",
-      "employeeId": 1
+      "employeeId": "3",
+      "breed": "Poodle"
     },
     {
-      "name": "Tony",
-      "breed": "All the time.",
-      "id": 2
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "url": "Images/1.jpg",
+      "employeeId": 2
+    },
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "url": "Images/1.jpg",
+      "employeeId": 3
+    },
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "url": "Images/1.jpg",
+      "employeeId": 4
+    },
+    {
+      "name": "Ummm",
+      "breed": "Weird little fury thing",
+      "id": 2,
+      "employeeId": 5
     }
   ],
   "employees": [
@@ -24,9 +46,19 @@
       "location": "North Nashville"
     },
     {
-      "id": 1,
+      "id": 3,
       "name": "Raphael",
       "location": "North Nashville"
+    },
+    {
+      "name": "Bevis and Nutthhead",
+      "location": "In Sage's Heart 4eva",
+      "id": 4
+    },
+    {
+      "name": "Sage",
+      "location": "Rules",
+      "id": 5
     }
   ],
   "locations": [

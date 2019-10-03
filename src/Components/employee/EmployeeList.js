@@ -32,15 +32,29 @@ class EmployeeList extends Component {
     console.log("EMPLOYEE CARD: Render");
 
     return (
-      <div className="container-cards">
-        {this.state.employees.map(employee => (
-          <EmployeeCard
-            deleteEmployee={this.deleteEmployee}
-            key={employee.id}
-            employee={employee}
-          />
-        ))}
-      </div>
+      <>
+        <section className="section-content">
+          <button
+            type="button"
+            className="btn"
+            onClick={() => {
+              this.props.history.push("/employees/new");
+            }}
+          >
+            Admit Employee
+          </button>
+        </section>
+        <div className="container-cards">
+          {this.state.employees.map(employee => (
+            <EmployeeCard
+              deleteEmployee={this.deleteEmployee}
+              key={employee.id}
+              employee={employee}
+              {...this.props}
+            />
+          ))}
+        </div>
+      </>
     );
   }
 }
